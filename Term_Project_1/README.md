@@ -19,7 +19,7 @@ The Airbnb schema comprises property listing data from [listings_austin.csv](htt
 ### OPERATIONAL LAYER ###
 My operational layer consists of [3 tables stored in csv](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/data) . The below EER diagram represents this schema. The **listings** table includes the properties listed by all hosts and the respective property attributes like property_type, bedrooms, bathrooms, price, reviews, etc. The **listings** table is linked to the **hosts** table with **host_id**. The **hosts** table includes the host particulars like name, the date on joining Airbnb, number of property listings, etc. Lastly, the **calendar** table shows the price and availability of the property on a particular date, which is linked to the **listings** table through **listing_id**. 
 
-![Schema](https://github.com/fatimamalikk/DE1-SQL/blob/tree/main/Term_Project_1/schema.PNG)
+![Schema](https://github.com/fatimamalikk/DE1-SQL/blob/main/Term_Project_1/schema.PNG)
 
 The operational layer was created using the following [queries - Line 1 to 103](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/DE1_fatima_arshad.sql)
 
@@ -32,7 +32,7 @@ My analytics plan is the following:
 
 This is illustrated in the below figure: 
 
-![Analytics plan diagram](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/analytics_plan.png)
+![Analytics plan diagram](https://github.com/fatimamalikk/DE1-SQL/blob/main/Term_Project_1/analytics_plan.png)
 
 I created two data warehouses through stored procedures:
 1. **Available Listings Data Warehouse** focusing on property listings available by the host 
@@ -61,12 +61,12 @@ I used the **host_ratings** data warehouse to extract this information and creat
 I created a denormalized snapshot of combined listings and hosts tables for the available_listings subject. I created in a stored procedure that contains commands to extract, transform and load the data into a new table. This combination of important variables from different tables into a single table i.e. a data warehouse will help us in further analysis for our new business plan. An analytical layer was created using the following queries:
 
 **Available Listings**
-![availability_listings](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/available_listings.png)
+![availability_listings](https://github.com/fatimamalikk/DE1-SQL/blob/main/Term_Project_1/available_listings.PNG)
 
 **Host Ratings** 
 Next, I created a data warehouse through a stored procedure that encloses host-related information such as the number of reviews and ratings.
 
-![host_ratings](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/host_ratings.PNG)
+![host_ratings](https://github.com/fatimamalikk/DE1-SQL/blob/main/Term_Project_1/host_ratings.PNG)
 
 #### TRIGGERS ####
 Furthermore, I have put a trigger in place to save the current information for a listing, before the user updates it. This helps to keep track of all the host and listings activity in case of any technical or legal issue.
@@ -87,7 +87,7 @@ WHERE
 
 The trigger runs successfully and the listings_audit table is updated with the old information.
 
-![warning_trigger](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/trigger_warning.PNG)
+![warning_trigger](https://github.com/fatimamalikk/DE1-SQL/blob/main/Term_Project_1/trigger_warning.PNG)
 
 
 ### DATAMARTS with VIEWS ###
