@@ -3,7 +3,7 @@
 SHOW VARIABLES LIKE "secure_file_priv";
 SHOW VARIABLES LIKE "local_infile";
 
--- Create database schema 'airbnb' to store data for Toronto Airbnbs
+-- Create database schema 'airbnb'
 DROP SCHEMA IF EXISTS airbnb;
 CREATE SCHEMA airbnb;
 
