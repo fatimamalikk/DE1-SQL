@@ -19,7 +19,7 @@ The Airbnb schema comprises property listing data from [listings_austin.csv](htt
 ### OPERATIONAL LAYER ###
 My operational layer consists of [3 tables stored in csv](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/data) . The below EER diagram represents this schema. The **listings** table includes the properties listed by all hosts and the respective property attributes like property_type, bedrooms, bathrooms, price, reviews, etc. The **listings** table is linked to the **hosts** table with **host_id**. The **hosts** table includes the host particulars like name, the date on joining Airbnb, number of property listings, etc. Lastly, the **calendar** table shows the price and availability of the property on a particular date, which is linked to the **listings** table through **listing_id**. 
 
-![Schema](/schema.PNG)
+![Schema](https://github.com/fatimamalikk/DE1-SQL/blob/tree/main/Term_Project_1/schema.PNG)
 
 The operational layer was created using the following [queries - Line 1 to 103](https://github.com/fatimamalikk/DE1-SQL/tree/main/Term_Project_1/DE1_fatima_arshad.sql)
 
